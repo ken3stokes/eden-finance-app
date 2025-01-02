@@ -1,6 +1,6 @@
 [build]
   base = "project"
-  publish = "dist"
+  publish = "project/dist"
   command = "npm run build"
 
 [build.environment]
@@ -16,4 +16,4 @@
 [dev]
   command = "npm start"
   port = 3000
-  publish = "dist"
+  publish = "project/dist"
