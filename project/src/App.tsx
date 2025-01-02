@@ -19,19 +19,17 @@ function App() {
 
   return (
     <AuthProvider>
-      {currentPage === 'main' && (
-        <AppContent 
-          onNavigate={setCurrentPage}
-        />
-      )}
-      {currentPage === 'privacy' && <PrivacyPolicy onBack={handleBack} />}
-      {currentPage === 'terms' && <TermsOfService onBack={handleBack} />}
-      {currentPage === 'cookies' && <CookiePolicy onBack={handleBack} />}
-      {currentPage === 'security' && <SecurityPolicy onBack={handleBack} />}
-      {currentPage === 'disclaimer' && <Disclaimer onBack={handleBack} />}
-      {currentPage === 'faq' && <FAQ onBack={handleBack} />}
-      {currentPage === 'docs' && <Documentation onBack={handleBack} />}
-      {currentPage === 'roadmap' && <Roadmap onBack={handleBack} />}
+      <div className="min-h-screen bg-white">
+        {currentPage === 'main' && <AppContent onNavigate={setCurrentPage} />}
+        {currentPage === 'privacy' && <PrivacyPolicy onBack={handleBack} />}
+        {currentPage === 'terms' && <TermsOfService onBack={handleBack} />}
+        {currentPage === 'cookies' && <CookiePolicy onBack={handleBack} />}
+        {currentPage === 'security' && <SecurityPolicy onBack={handleBack} />}
+        {currentPage === 'disclaimer' && <Disclaimer onBack={handleBack} />}
+        {currentPage === 'faq' && <FAQ onBack={handleBack} />}
+        {currentPage === 'docs' && <Documentation onBack={handleBack} />}
+        {currentPage === 'roadmap' && <Roadmap onBack={handleBack} />}
+      </div>
     </AuthProvider>
   );
 }

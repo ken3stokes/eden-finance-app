@@ -5,11 +5,13 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  VITE_BASE_URL = "/"
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+  force = true
 
 [dev]
   command = "npm start"
