@@ -1,1 +1,0 @@
-export type { CryptoKey } from '../../../node_modules/typescript/lib/lib.dom';
